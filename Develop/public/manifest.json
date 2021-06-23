@@ -1,0 +1,23 @@
+{
+  "icons": [
+    {
+      "src": "public/icons/icon-192x192.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "public/icons/icon-512x512.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    }
+  ],
+  "name": "Budget Trackers",
+  "short_name": "",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": "/",
+  "description": "An application that allows you to track withdrawals and deposits with or without a data/internet connection",
+  "background_color": "#FFFFFF",
+  "theme_color": "#FFFFFF",
+  "theme-color": "#FFFFFF"
+}
