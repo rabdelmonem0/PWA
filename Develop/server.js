@@ -17,7 +17,7 @@ app.use(express.static("public"));
 
 mongoose.connect("mongodb://localhost/budget", {
   useNewUrlParser: true,
-  useFindAndModify: false
+  useFindAndModify: false,
 }).then(() => console.log('connected to db').catch(err => console.log('not connected! ', err)));
 
 // routes
