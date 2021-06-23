@@ -4,21 +4,21 @@ let db;
 
 const request = indexedDB.open("budget", 1);
 
-request.onupgradeneeded = function (event) {
-  const db = event.target.result;
+request.onupgradeneeded = (e) => {
+  const db = e.target.result;
   db.createObjectStore("pending", { autoIncrement: true });
 };
 
-request.onsuccess = function (event) {
-  db = event.target.result;
+request.onsuccess = (e) => {
+  db = e.target.result;
 
   if (navigator.onLine) {
     checkDatabase();
   }
 };
 
-request.onerror = function (event) {
-  console.log("Woops! " + event.target.errorCode);
+request.onerror = (e) => {
+  console.log("Woops! " + e.target.errorCode);
 };
 
 function saveRecord(record) {
@@ -34,7 +34,7 @@ function checkDatabase() {
   const store = transaction.objectStore("pending");
   const getAll = store.getAll();
 
-  getAll.onsuccess = function () {
+  getAll.onsuccess = () => {
     if (getAll.result.length > 0) {
       fetch("/api/transaction/bulk", {
         method: "POST",
