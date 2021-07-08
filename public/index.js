@@ -1,13 +1,13 @@
 // check for the service worker
   // standard chunk of code
 
-  if ("serviceWorker" in navigator) {
-    window.addEventListener("load", () => {
-      navigator.serviceWorker.register("./serviceWorker.js").then(reg => {
-        console.log("We found your service worker file!", reg);
-      });
-    });
-  }
+  // if ("serviceWorker" in navigator) {
+  //   window.addEventListener("load", () => {
+  //     navigator.serviceWorker.register("./serviceWorker.js").then(reg => {
+  //       console.log("We found your service worker file!", reg);
+  //     });
+  //   });
+  // }
 
 let transactions = [];
 let myChart;
